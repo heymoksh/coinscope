@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoinScope — Track the crypto market</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪙</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">◎</span>
+      <span class="brand-name">CoinScope</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#blog">Blog</a>
+    </nav>
+    <div class="nav-right">
+      <select id="currency-select" aria-label="Currency">
+        <option value="usd">USD</option>
+        <option value="eur">EUR</option>
+        <option value="inr">INR</option>
+      </select>
+      <button id="theme-toggle" class="icon-btn" title="Toggle theme">🌙</button>
+      <button class="cta-btn">Sign up</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>See where the market<br />is really moving.</h1>
+      <p>CoinScope pulls live prices for the top cryptocurrencies and lets you drill into any coin's
+        history in a couple of clicks. Built as a personal project to learn API-driven UIs.</p>
+      <form id="search-form" class="search-form" autocomplete="off">
+        <input id="search-input" type="text" list="coin-list" placeholder="Search a coin, e.g. Bitcoin" required />
+        <datalist id="coin-list"></datalist>
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div id="status" class="status" hidden></div>
+
+      <div class="table-wrap">
+        <div class="row row-head">
+          <span class="col-rank">#</span>
+          <span class="col-coin">Coin</span>
+          <span class="col-price">Price</span>
+          <span class="col-change">24h</span>
+          <span class="col-cap">Market Cap</span>
+        </div>
+        <div id="coin-rows"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>CoinScope — a personal project by Moksh Jain. Market data via CoinGecko.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
