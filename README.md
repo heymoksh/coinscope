@@ -71,7 +71,13 @@ No build step or install required.
 
 ## Screenshots
 
-_Add screenshots of the home page and a coin detail page here once deployed._
+**Home page**
+
+![Home page showing the market table](assets/screenshots/home-page.png)
+
+**Coin detail page**
+
+![Coin detail page with price history chart](assets/screenshots/coin-detail.png)
 
 ## Future Improvements
 
