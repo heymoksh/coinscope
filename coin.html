@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoinScope — Coin details</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪙</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">◎</span>
+      <span class="brand-name">CoinScope</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#blog">Blog</a>
+    </nav>
+    <div class="nav-right">
+      <select id="currency-select" aria-label="Currency">
+        <option value="usd">USD</option>
+        <option value="eur">EUR</option>
+        <option value="inr">INR</option>
+      </select>
+      <button id="theme-toggle" class="icon-btn" title="Toggle theme">🌙</button>
+      <button class="cta-btn">Sign up</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="status" class="status" hidden></div>
+
+    <section id="coin-view" class="coin-view" hidden>
+      <div class="coin-heading">
+        <img id="coin-image" src="" alt="" />
+        <h1><span id="coin-name"></span> <span id="coin-symbol" class="muted"></span></h1>
+      </div>
+
+      <div class="chart-card">
+        <canvas id="price-chart" height="90"></canvas>
+      </div>
+
+      <div class="stats-card">
+        <div class="stat-row"><span>Market Rank</span><span id="stat-rank"></span></div>
+        <div class="stat-row"><span>Current Price</span><span id="stat-price"></span></div>
+        <div class="stat-row"><span>Market Cap</span><span id="stat-cap"></span></div>
+        <div class="stat-row"><span>24h High</span><span id="stat-high"></span></div>
+        <div class="stat-row"><span>24h Low</span><span id="stat-low"></span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>CoinScope — a personal project by Moksh Jain. Market data via CoinGecko.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/coin.js"></script>
+</body>
+</html>
