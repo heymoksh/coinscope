@@ -6,9 +6,7 @@ A small cryptocurrency market tracker built with plain HTML, CSS, and JavaScript
 
 CoinScope shows the top cryptocurrencies by market cap, lets you search for a
 specific coin, switch between USD/EUR/INR, and open any coin to see its price
-history on a chart along with its current stats. It's a personal
-reimplementation of an earlier React version of the same idea, rebuilt without
-a framework so every part of it is easy to read and explain.
+history on a chart along with its current stats. 
 
 ## Features
 
@@ -86,7 +84,3 @@ No build step or install required.
 - Debounced live search instead of submit-on-enter
 - Caching recent API responses to reduce rate-limit issues
 
-## Credits
-
-Rebuilt from an earlier React + Vite version of the same concept, as a
-learning exercise in doing the same job with no framework.
